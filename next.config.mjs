@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output:'export',
+  /*output:'export',*/
   /*assetPrefix: './',*/
   productionBrowserSourceMaps: true,
   distDir: process.env.DIST_DIR || '.next',  typescript: {
