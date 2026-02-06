@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary Colors - Calming Teal */
+    --color-primary: #2D7A7A; /* teal-700 */
+    --color-primary-foreground: #FFFFFF; /* white */
+    
+    /* Secondary Colors - Warm Beige */
+    --color-secondary: #F4EBE8; /* warm beige */
+    --color-secondary-foreground: #2C2C2C; /* charcoal */
+    
+    /* Accent Colors - Soft Terracotta */
+    --color-accent: #C17767; /* terracotta */
+    --color-accent-foreground: #FFFFFF; /* white */
+    
+    /* Background & Foreground */
+    --color-background: #FDFBF9; /* off-white */
+    --color-foreground: #2C2C2C; /* charcoal */
+    
+    /* Muted Colors */
+    --color-muted: #E8E3DF; /* light gray-beige */
+    --color-muted-foreground: #6B6B6B; /* gray-600 */
+    
+    /* Card Colors */
+    --color-card: #FFFFFF; /* white */
+    --color-card-foreground: #2C2C2C; /* charcoal */
+    
+    /* Popover Colors */
+    --color-popover: #FFFFFF; /* white */
+    --color-popover-foreground: #2C2C2C; /* charcoal */
+    
+    /* Border & Input */
+    --color-border: #D4CCC7; /* light brown-gray */
+    --color-input: #E8E3DF; /* light gray-beige */
+    --color-ring: #2D7A7A; /* teal-700 */
+    
+    /* Status Colors */
+    --color-success: #4A7C59; /* green-700 */
+    --color-success-foreground: #FFFFFF; /* white */
+    
+    --color-warning: #D97706; /* amber-600 */
+    --color-warning-foreground: #FFFFFF; /* white */
+    
+    --color-error: #DC2626; /* red-600 */
+    --color-error-foreground: #FFFFFF; /* white */
+    
+    --color-destructive: #DC2626; /* red-600 */
+    --color-destructive-foreground: #FFFFFF; /* white */
+    
+    /* Radius */
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  /* Glassmorphism utility */
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(45, 122, 122, 0.1);
+  }
+  
+  /* Soft shadow utility */
+  .shadow-soft {
+    box-shadow: 0 4px 20px rgba(45, 122, 122, 0.08);
+  }
+  
+  /* Text gradient utility */
+  .text-gradient {
+    background: linear-gradient(135deg, #2D7A7A 0%, #C17767 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Stagger animation delays */
+.delay-100 {
+  animation-delay: 100ms;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.delay-300 {
+  animation-delay: 300ms;
+}
+
+.delay-400 {
+  animation-delay: 400ms;
+}
